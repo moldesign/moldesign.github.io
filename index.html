@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MIT 6.S085 Fall 2023</title>
+    <link rel="icon" type="image/png" href="fav_2.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>∫
+
+
+
+
+    
+<!-- Navigation Bar -->
+<nav>
+    <img src="MIT_white.png" alt="Description of Image" class="nav-image"> <!-- Add your image here -->
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#course-info">About</a></li>
+        <li><a href="#instructors">Instructors</a></li>
+        <li><a href="#course-schedule">Schedule</a></li>
+        <li><a href="#resource-section">Resources</a></li>
+        <li><a href="#faq-section">F.A.Q.</a></li>
+    </ul>
+</nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <header class="course-header", id = "home">
+        <div class="text-container">
+            <h1 class="course-number">MIT 6.S085: Fall 2023</h1>
+            <h2 class="course-title">Machine Learning for Molecular Design</h2>
+            <!-- <p class="course-tagline">Brief description of the course</p> -->
+        </div>
+        <div class="image-container">
+            <!-- the background image is set via CSS -->
+        </div>
+    </header>
+
+
+
+    <section class="course-info", id="course-info">
+        <div class="container">
+            <div class="description-column">
+                <h2>Description</h2>
+                <div class="description-content">
+                <p>This course provides an introduction and hands-on practices to the <span class="highlight_blue">applications of machine learning 
+                    in molecular design and engineering</span>. The covered topics include: analyzing molecular properties using 
+                    data-driven methods, using generative modeling, and applying combinatorial optimization approaches to 
+                    design novel functional molecules such as new drugs. Unlike 6.C51+10.C51, this class adopts a  
+                    <span class="highlight_blue">bootcamp-style</span> format that focuses on designing novel functional molecules. 
+                    We don't only introduce new concepts but immediately demonstrate their applications with code, 
+                    which is complemented by in-class coding exercises. The course includes a <span class="highlight_blue">competition-based project</span> 
+                    that simulates real-world molecular discovery scenarios. In the final week of the course, we will host notable guest lecturers
+                    who will introduce students to cutting-edge research topics. </p>
+                </div>
+            </div>
+            <div class="time-location-column">
+                <h2>Time and Location</h2>
+                <p>Mon Jan 8 - Fri Feb 2, 2024<br>
+                    10 AM - 12 PM EST M/W/F<br>
+                    34-301<br>
+                </p>
+
+                <h2>Announcements</h2>
+                <div id="announcements">
+                    <ul>
+                        <li>Pre-register for <span class="highlight_blue">6.S085</span> on the registrar's website by 1/8/2024!</li>
+                        <li>The <a href="https://drive.google.com/file/d/1vyHymum3MVoQWPENq8CXRVPcGlaHeuYz/view?usp=sharing" target="_blank">syllabus</a> is published!</li>
+                    </ul>
+                </div>
+            </div>
+
+
+
+
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+
+<section class="instructors", id="instructors">
+    <div class="container">
+        <h2 class="staff-title">Staff Members</h2>
+
+        <!-- <p>Wenhao and Ron are both members of the <span class="highlight_blue">Coley Lab</span> at MIT. Here's a short summary of the lab's
+            research interests:<br>
+
+
+            
+            "Based in MIT's Department of Chemical Engineering and the College of Computing, we combine expertise in chemical engineering,<br>
+            computer science, and chemistry to improve the utility of computer-assistance for chemical discovery. The majority of our work is<br> 
+            computational, but we maintain a strong interest in laboratory automation as applied to testing computational hypotheses, validating<br> 
+            model predictions, and generating high-fidelity experimental data. We develop platform technologies and workflows with relevance to <br>
+            drug discovery, chemical synthesis, and materials science." (read more <a href="https://coley.mit.edu/" class="colab-link">here!</a>)
+        
+        </p> -->
+
+        <div class="instructor-container">
+
+            <div class="instructor" id="instructor1">
+                <div class="image-frame">
+                    <img src="wenhao_resized.png" alt="Instructor 1">
+                </div>
+                <h3 class="name">Wenhao Gao</h3>
+                <p class="details">Wenhao is a PhD candidate in the <a href="https://coley.mit.edu/" class="colab-link">Coley Research Group</a> at MIT. 
+                    His research focuses on accelerating and scaling up the process of molecular discovery by leveraging the capabilities of AI for decision-making. 
+                    He is the recipient of a <a href="https://research.google/outreach/phd-fellowship/recipients/" class="colab-link">Google Ph.D. fellowship</a> 
+                    and an <a href="https://news.mit.edu/2023/takeda-fellows-leveraging-ai-positively-impact-human-health-0112" class="colab-link">MIT-Takeda fellowship</a>. 
+                    Wenhao also serves as one of the organizers of multiple <a href="https://ai4sciencecommunity.github.io/" class="colab-link">AI for Science workshops</a> at NeurIPS, ICML, 
+                    and <a href="https://acs.digitellinc.com/sessions/573872/view" class="colab-link">Machine Learning and AI for Organic Chemistry Symposium</a> at ACS.</p>
+                <div class="social-media">
+                    <a href="https://wenhao-gao.github.io/" class="personal-page-logo">
+                        <img src="link.png" alt="Personal web page">
+                    </a>
+                    <a href="https://www.linkedin.com/in/wenhao-gao-5bba5817b/" class="linkedin-logo">
+                        <img src="linkedin_logo.png" alt="LinkedIn">
+                    </a>
+                    <a href="https://twitter.com/WenhaoGao1" class="x-social-logo">
+                        <img src="Screenshot 2023-12-19 214228.png" alt="X Social Network">
+                    </a>
+                </div>
+            </div>
+            <div class="instructor" id="instructor2">
+                <div class="image-frame">
+                    <img src="me_resized.jpg" alt="Instructor 2">
+                </div>
+                <h3 class="name">Ron Shprints</h3>
+                <p class="details">Ron is a third year undergraduate student at MIT, majoring in mathematics and computer science. His research interest
+                    lies in deep learning and its applications to the natural sciences. He has been doing research in the intersection 
+                    of machine learning and molecular discovery since his freshman year. Ron joined the <a href="https://coley.mit.edu/" class="colab-link">Coley Research Group</a> as a  UROP student 
+                    in summer 2022 and has collaborated with Wenhao on several projects. Before that he worked at the <a href="https://jensenlab.mit.edu/" class="colab-link">Jensen Research Group</a> where he collaborated
+                    with <a href="https://www.chem.upenn.edu/people/andrew-zahrt" class="colab-link">Andrew Zahrt</a> on the <a href="https://pubs.acs.org/doi/10.1021/jacs.2c08997" class="colab-link">machine learning discovery of electrochemical reactions</a>.
+                </p>
+                <div class="social-media">
+                    <a href="https://www.linkedin.com/in/ronshprints/" class="linkedin-logo">
+                        <img src="linkedin_logo.png" alt="LinkedIn">
+                    </a>
+                    <a href="https://twitter.com/RShprints" class="x-social-logo">
+                        <img src="Screenshot 2023-12-19 214228.png" alt="X Social Network">
+                    </a>
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section class="course-schedule", id="course-schedule">
+    <h1>Course Schedule</h1>
+
+    <div class="container">
+        <table>
+            <tr>
+                <th>Date</th>
+                <th>Day of the Week</th>
+                <th>Topic</th>
+                <th>Link to Colab</th>
+              </tr>
+
+              <!-- Class 1 -->
+              <tr>
+                <td><span class="highlight_red">1/8/2024</span></td>
+                <td><span class="highlight_brown">Monday</span></td>
+                <td><span class="highlight_orange">Course overview +  Broad review of historical development and common workflows</span></td>
+                <td><a href="#" class="colab-link">[colab notebook] coming soon!</a></td>
+              </tr>
+
+              <!-- Class 2 -->
+              <tr>
+                <td><span class="highlight_red">1/10/2024</span></td>
+                <td><span class="highlight_brown">Wednesday</span></td>
+                <td><span class="highlight_orange">Data process and analysis: focus on dimensionality reduction and clustering</span></td>
+                <td><a href="#" class="colab-link">[colab notebook] coming soon!</a></td>
+              </tr>
+
+
+              <!-- Class 3 -->
+              <tr>
+                <td><span class="highlight_red">1/12/2024</span></td>
+                <td><span class="highlight_brown">Friday</span></td>
+                <td><span class="highlight_orange">Structure-property relationship modeling (Part 1): featurization of molecules</span></td>
+                <td><a href="#" class="colab-link">[colab notebook] coming soon!</a></td>
+              </tr>
+
+
+              <!-- Class 4 -->
+              <tr>
+                <td><span class="highlight_red">1/16/2024</span></td>
+                <td><span class="highlight_brown">Tuesday</span></td>
+                <td><span class="highlight_orange">Structure-property relationship modeling (Part 2): deep learning architectures</span></td>
+                <td><a href="#" class="colab-link">[colab notebook] coming soon!</a></td>
+              </tr>
+              
+              
+              <!-- Class 5 -->
+              <tr>
+                <td><span class="highlight_red">1/17/2024</span></td>
+                <td><span class="highlight_brown">Wednesday</span></td>
+                <td><span class="highlight_orange">Selected topic - Interpretable machine learning models</span></td>
+                <td><a href="#" class="colab-link">[colab notebook] coming soon!</a></td>
+              </tr>                     
+              
+              
+              <!-- Class 6 -->
+              <tr>
+                <td><span class="highlight_red">1/19/2024</span></td>
+                <td><span class="highlight_brown">Friday</span></td>
+                <td><span class="highlight_orange">Molecular generation and design (Part 1): screening and generative AI</span></td>
+                <td><a href="#" class="colab-link">[colab notebook] coming soon!</a></td>
+              </tr> 
+              
+              
+              <!-- Class 7 -->
+              <tr>
+                <td><span class="highlight_red">1/22/2024</span></td>
+                <td><span class="highlight_brown">Monday</span></td>
+                <td><span class="highlight_orange">Molecular generation and design (Part 2): optimization approach</span></td>
+                <td><a href="#" class="colab-link">[colab notebook] coming soon!</a></td>
+              </tr>  
+
+
+              <!-- Class 8 -->
+              <tr>
+                <td><span class="highlight_red">1/24/2024</span></td>
+                <td><span class="highlight_brown">Wednesday</span></td>
+                <td><span class="highlight_orange">Selected topic - Machine learning for 3D conformation/distribution.</span></td>
+                <td><a href="#" class="colab-link">[colab notebook] coming soon!</a></td>
+              </tr> 
+              
+              
+              <!-- Class 9 -->
+              <tr>
+                <td><span class="highlight_red">1/26/2024</span></td>
+                <td><span class="highlight_brown">Friday</span></td>
+                <td><span class="highlight_orange">Guest Lecture 1</span></td>
+                <td><a href="#" class="colab-link">[slides] coming soon!</a></td>
+              </tr> 
+
+
+
+              <!-- Class 10 -->
+              <tr>
+                <td><span class="highlight_red">1/29/2024</span></td>
+                <td><span class="highlight_brown">Monday</span></td>
+                <td><span class="highlight_orange">Guest Lecture 2</span></td>
+                <td><a href="#" class="colab-link">[slides] coming soon!</a></td>
+              </tr>
+
+
+              <!-- Class 11 -->
+              <tr>
+                <td><span class="highlight_red">1/31/2024</span></td>
+                <td><span class="highlight_brown">Wednesday</span></td>
+                <td><span class="highlight_orange">Guest Lecture 3</span></td>
+                <td><a href="#" class="colab-link">[slides] coming soon!</a></td>
+              </tr> 
+
+              <!-- Class 12 -->
+              <tr>
+                <td><span class="highlight_red">2/2/2024</span></td>
+                <td><span class="highlight_brown">Friday</span></td>
+                <td><span class="highlight_orange">Final project presentations</span></td>
+                <td><a href="#" class="colab-link">[slides] coming soon!</a></td>
+              </tr> 
+
+        </table>
+      </div>
+    
+    
+
+
+</section>
+
+
+
+
+
+
+
+
+
+
+<section class="resource-section", id="resource-section">
+    <div class="resource-content">
+        <h1 class="resource-title">Useful Resources</h1>
+        <p>Explore our curated list of resources to enhance your learning experience:</p>
+
+        <p class="resource-subtitle">Python and notebook:</p>
+        <ul>
+            <li><a href="https://www.py4e.com/" target="_blank">Python for Everyone</a> - An open course from the University of Michigan, providing introduction to Python.</li>
+            <li><a href="https://github.com/Qiskit/textbook/tree/main/notebooks/ch-prerequisites#" target="_blank">Python and Jupyter notebook</a> - A short notebook introduction to Python and Jupyter notebook.</li>
+            <li><a href="https://docs.python.org/3/" target="_blank">Python Documentation</a> - The official Python documentation.</li>
+            <li><a href="https://education.molssi.org/resources.html#programming" target="_blank">MolSSI Educational resources</a> - Open source lessons provided by Molecular Sciences Software Institute (MolSSI).</li>
+            <li><a href="https://research.google.com/colaboratory/" target="_blank">Google Colab tutorial</a> - The official Google Colab tutorial.</li>
+        </ul>
+
+        <p class="resource-subtitle">Machine Learning:</p>
+        <ul>
+            <li><a href="https://sebastianraschka.com/blog/2021/ml-course.html" target="_blank">Introduction to Machine Learning</a> - An open course given by Sebastian Raschka.</li>
+            <li><a href="https://scikit-learn.org/stable/" target="_blank">Scikit-learn Documentation</a> - The official documentation of scikit-learn.</li>
+            <li><a href="https://pytorch.org/docs/stable/index.html" target="_blank">PyTorch Documentation</a> - The official PyTorch documentation.</li>
+            <li><a href="https://pytorch.org/tutorials/beginner/deep_learning_60min_blitz.html" target="_blank">PyTorch Deep Learning Tutorial</a> - The officiel tutorial of PyTorch.</li>
+            <li><a href="https://d2l.ai/index.html" target="_blank">Dive into Deep Learning</a> - An open sourced textbook of deep learning.</li>
+            <li><a href="https://pytorch.org/tutorials/intermediate/tensorboard_tutorial.html" target="_blank">Tensorboard Tutorial</a> - A tutorial of visualizing model/data with Tensorboard.</li>
+            <li><a href="https://pyg.org/blogs-and-tutorials" target="_blank">Graph Neural Network Examples</a> - The official blogs/tutorials provided by the PyG team.</li>
+        </ul>
+
+        <p class="resource-subtitle">Molecular science package:</p>
+        <ul>
+            <li><a href="https://www.rdkit.org/docs/GettingStartedInPython.html" target="_blank">RDKit</a> - An open-source software that provides tools for the manipulation and analysis of chemical structures.</li>
+            <li><a href="https://datamol.io/" target="_blank">Datamol</a> - An open-source toolkit that simplifies molecular processing and featurization workflows in drug discovery.</li>
+            <li><a href="https://tdcommons.ai/" target="_blank">PyTDC</a> - A software and platform that provides uniform access to curated therapeutic-related datasets.</li>
+            <li><a href="https://github.com/hsiaoyi0504/awesome-cheminformatics" target="_blank">A nice list of cheminformatics library</a></li>
+        </ul>
+
+        <p class="resource-subtitle">Version control and other miscellaneous:</p>
+        <ul>
+            <li><a href="https://missing.csail.mit.edu/" target="_blank">The Missing Semester of Your CS Education</a> - An open course from MIT, providing introduction to version control, shell, and other useful tools.</li>
+        </ul>
+
+    </div>
+</section>
+
+
+
+
+
+
+
+<section class="faq-section", id="faq-section">
+    <div class="resource-content">
+        <h1 class="resource-title">Frequently Asked Questions</h1>
+        <h5>For any other questions, please reach out to the team at <a href="mailto:moleculedesigner@gmail.com">moleculedesigner@gmail.com</a>.</h5>
+
+        <div class="faq-item">
+
+            <h2 class="faq-question">Q: Is it possible to take the class as a listener?</h2>
+            <p class="faq-answer">A: Partially yes. You are welcome to audit the course and access all the material from this website. However, this 
+                class is structured as a bootcamp-style class that expects students to learn from actively participating in various activities, including literature 
+                presentations and projects. Due to capacity constraints, we're unable to include listeners in all of these activities. Nonetheless, we hope you find the resources helpful and informative!</p>
+
+            <h2 class="faq-question">Q: How can I access the course materials?</h2>
+            <p class="faq-answer">A: All the course materials are open-sourced and available on our webpage. If you find something missing, feel free to send us an email.</p>
+
+            <h2 class="faq-question">Q: What are the machine learning pre-requisites?</h2>
+            <p class="faq-answer">A: There are no hard machine learning pre-requisites. We will cover some basic machine learning concepts in the first few classes,
+                but familiarity with the basics of machine learning will definitely help you out. Some of the introductory machine learning classes at 
+                MIT, like 6.3900, provide a great background for this class. If you are not sure about if you have a sufficient machine learning background, 
+                feel free to send us an email.
+            </p>
+
+            <h2 class="faq-question">Q: What are the science pre-requisites?</h2>
+            <p class="faq-answer">A: There are no specific science pre-requisites. However, being familiar with undergraduate level organic chemistry, for example, 
+                how to draw organic molecules, identify common functional groups, and understand basic structure to property patterns, 
+                will help you understand the material better. If you are not sure about if you have a sufficient science background, feel free to send us an email.
+            </p>
+
+            <h2 class="faq-question">Q: How comfortable should I feel with coding and in what languages?</h2>
+            <p class="faq-answer">A: As our course is a bootcamp-style class, we will have many coding exercises. So being fluent in Python, 
+                or being able to learn Python in a short time would help you gain more from our class. We recommend some background with packages 
+                like PyTorch and RDKit, but it's not required to know how to use them in advance.
+
+        </div>
+
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+    <footer class="course-footer">
+        <p>Copyright © MIT 6.S085</p>
+    </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--scroll animations-->
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+    const sections = document.querySelectorAll("section");
+
+    const options = {
+        root: null, // sets the frame to the viewport
+        threshold: 0.1, 
+        rootMargin: "0px",
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+        } else {
+            entry.target.classList.remove("visible");
+        }
+        });
+    }, options);
+
+    sections.forEach(section => {
+        observer.observe(section);
+    });
+    });
+
+
+    document.addEventListener("DOMContentLoaded", () => {
+    let sections = document.querySelectorAll('section, .course-header');
+    let navLinks = document.querySelectorAll('nav ul li a');
+
+    const observer = new IntersectionObserver(entries => {
+        let firstSectionInView = null;
+       
+        entries.forEach(entry => {  // find the first section in the viewport
+            if (entry.isIntersecting && (!firstSectionInView || entry.target.offsetTop < firstSectionInView.offsetTop)) {
+                firstSectionInView = entry.target;
+            }
+        });
+
+        
+        if (firstSectionInView) { // highlight the corresponding navigation link
+            navLinks.forEach(link => {
+                link.classList.toggle('active', link.getAttribute('href').substring(1) === firstSectionInView.id);
+            });
+        }
+    }, { threshold: [0.5, 0.75] }); // adjust thresholds for better detection
+
+    sections.forEach(section => observer.observe(section));
+});
+
+
+</script>
+</html>
+</body>

@@ -1,0 +1,498 @@
+/*********************************************************************************************/
+
+/* Navigation Bar */
+
+nav {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    background-color: #333; 
+    overflow: hidden;
+    height: 60px; 
+    width: 100%; 
+    position: fixed; 
+    top: 0; 
+    z-index: 1000; 
+}
+
+nav .nav-image {
+    height: auto; 
+    width: auto; 
+    max-height: 60%; 
+    margin-left: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex; 
+}
+
+nav ul li {
+    margin-right: 16px; 
+}
+
+nav ul li a {
+    display: block;
+    color: white;
+    text-decoration: none;
+}
+
+/*style for the active section link */
+nav ul li a.active {
+    color: rgb(212, 109, 13); 
+}
+
+
+
+/*********************************************************************************************/
+
+/* General Styles */
+
+
+body, html {
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    line-height: 1.6;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    min-height: 100vh;
+}
+
+/* Navigation Bar */
+
+.top-nav {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+.top-nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: inline-block;
+}
+
+/* Header */
+
+.course-header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: left;
+    height: 100vh;
+}
+
+.course-header .text-container {
+    width: 50%;
+    background-color: white; 
+    padding: 20px;
+    font-size: 1.5em;
+}
+
+.course-header .image-container {
+    width: 50%;
+    background: url('main_background.png') no-repeat center center/cover;
+    height: 100vh;
+}
+
+
+@media (max-width: 768px) {
+    .course-header {
+        flex-direction: column;
+    }
+    .course-header .text-container,
+    .course-header .image-container {
+        width: 100%;
+        height: 50vh;
+    }
+}
+
+
+/*********************************************************************************************/
+
+
+/* Sections - General Styles */
+section {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    will-change: opacity, transform;
+    display: block;
+    align-items: center; 
+    padding: 40px 0; 
+}
+
+
+section:nth-of-type(odd) {
+    background-color: #DCD8D7;
+}
+
+section:nth-of-type(even) {
+    background-color: #fff;
+}
+
+section.visible { /*animation for Revealing Sections */
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/*heights*/
+
+#course-info {
+    height: 50vh; 
+}
+
+#instructors {
+    height: 105vh; 
+}
+
+
+#course-schedule {
+    height: 85vh; 
+}
+
+
+/*********************************************************************************************/
+
+/*Description and Time and Location*/
+
+.container {
+    display: flex; 
+    text-align: center;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px;
+}
+
+.description-column {
+    flex: 2;
+    margin: 10px;
+    max-width: 50%;
+}
+
+.description-content {
+    max-width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.time-location-column {
+    flex: 1;
+    margin: 10px;
+    max-width: 50%;
+}
+
+
+#announcements ul {
+    padding-left: 10px; 
+    list-style-position: inside; 
+    text-align: left;
+}
+
+#announcements ul li {
+    text-align: left;
+}
+
+
+@media (max-width: 768px) {
+    .description-column, .time-location-column {
+        max-width: 70%;
+    }
+}
+/*********************************************************************************************/
+
+/*instructors*/
+
+.instructors .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+}
+
+
+.instructor {
+    width: calc(50% - 10px);
+}
+
+.staff-title {
+    text-align: center;
+    font-size: 1.5em;
+}
+
+.instructor-container {
+    margin-top: 0; 
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.image-frame {
+    width: 200px;
+    height: 300px;
+    margin: auto;
+    border: 3px solid #ccc; 
+    overflow: hidden; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+}
+
+.name {
+    font-weight: bold;
+}
+
+.details {
+    max-width: 600px;
+    text-align: middle;
+    margin: 0 auto;
+    margin-top: 0px;
+}
+
+.social-media {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+
+.social-media a {
+    width: 38px; 
+    height: 36px;
+    background-color: #eee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 4px;
+}
+
+.social-media img {
+    /* max-width: 100%; */
+    max-height: 100%;
+}
+
+
+@media (max-width: 768px) {
+    .instructor-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .instructor {
+        width: 100%; 
+    }
+}
+
+/*********************************************************************************************/
+
+/* Footer */
+
+.course-footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    z-index: 10;
+}
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    .top-nav a {
+        display: block;
+        margin: 5px 0;
+    }
+}
+
+/*********************************************************************************************/
+
+/*schedule*/
+
+.course-schedule h1 {
+    display: block; 
+    text-align: center; 
+    width: 100%; 
+    margin-top: 20px; 
+    margin-bottom: 20px; 
+}
+
+.schedule-container {
+    display: block;
+    flex-direction: column;
+    align-items: center; 
+    padding: 0 20px; 
+    width: 100%;
+}
+
+
+.colab-link {
+    color: rgb(132, 77, 5);
+    text-decoration: underline; 
+}
+
+
+.container {
+    width: 100%;
+    text-align: center;
+  }
+  
+  table {
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: collapse;
+  }
+  
+  th, td {
+    border: 1px solid black;
+    padding: 8px;
+  }
+  
+  th {
+    background-color: #f2f2f2;
+  }
+
+
+/*********************************************************************************************/
+
+/*resources*/
+
+.resource-section {
+    text-align: center; 
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.resource-content {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.resource-title {
+    display: inline-block; 
+    width: auto; 
+}
+
+.resource-subtitle {
+    display: inline-block; 
+    width: auto; 
+    font-weight: bold;
+}
+
+.resource-section ul {
+    text-align: left; /* Aligns text in the list to the left */
+}
+
+.resource-section ul li {
+    text-align: left; /* Ensures that each list item's text is left-aligned */
+}
+
+/*********************************************************************************************/
+
+/*faq*/
+
+.faq-section {
+    text-align: center; 
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.faq-content {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.faq-title {
+    display: inline-block; 
+    width: auto; 
+}
+
+.faq-item {
+    background-color: #f9f9f9; /* Light grey background for each item */
+    border: 1px solid #ddd; /* A subtle border */
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px; /* Spacing inside each item */
+    margin-bottom: 15px; /* Space between each item */
+}
+
+.faq-question {
+    font-weight: bold; /* Make the question bold */
+    font-size: 1.2em; /* Increase the size of the question */
+    margin-bottom: 10px; /* Space between the question and answer */
+    color: #333; /* Dark color for the question */
+}
+
+.faq-answer {
+    font-size: 1em; /* Standard size for the answer */
+    line-height: 1.6; /* Increase line height for readability */
+    color: #666; /* Lighter color for the answer */
+}
+
+
+/*********************************************************************************************/
+
+/*style*/
+
+/* Hover Effects */
+a:hover {
+    opacity: 0.8;
+}
+
+
+.highlight_blue {
+    font-weight: bold;
+    color: rgb(5, 9, 118); 
+}
+
+.highlight_red {
+    font-weight: bold;
+    color: rgb(143, 6, 8); 
+}
+
+.highlight_green {
+    font-weight: bold;
+    color: rgb(6, 77, 25); 
+}
+
+.highlight_orange {
+    font-weight: bold;
+    color: rgb(212, 109, 13); 
+}
+
+.highlight_brown {
+    font-weight: bold;
+    color: rgb(54, 33, 0); 
+}
+
+italic-text {
+    font-style: italic;
+}
