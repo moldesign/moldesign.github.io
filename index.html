@@ -21,6 +21,7 @@
         <li><a href="#course-info">About</a></li>
         <li><a href="#instructors">Instructors</a></li>
         <li><a href="#course-schedule">Schedule</a></li>
+        <li><a href="#leaderboard">Leaderboard</a></li>
         <li><a href="#resource-section">Resources</a></li>
         <li><a href="#faq-section">F.A.Q.</a></li>
     </ul>
@@ -218,7 +219,8 @@
                 <td><span class="highlight_red">1/12/2024</span></td>
                 <td><span class="highlight_brown">Friday</span></td>
                 <td><span class="highlight_orange">Structure-property relationship modeling (Part 1): featurization of molecules</span></td>
-                <td><a href="https://colab.research.google.com/drive/1RENljgV5tJYRd9QXJ7Ag5XUdTqflldL4?usp=sharing" class="colab-link">[problems]</a></td>
+                <td><a href="https://colab.research.google.com/drive/1RENljgV5tJYRd9QXJ7Ag5XUdTqflldL4?usp=sharing" class="colab-link">[problems]</a>,
+                    <a href="https://colab.research.google.com/drive/1ncvXDPCu3wHiJ_2a91nJ8z-F38zEwkvc?usp=sharing" class="colab-link">[solutions]</a></td>
               </tr>
 
 
@@ -311,6 +313,14 @@
 </section>
 
 
+
+
+
+
+<section id="leaderboard">
+    <h2>Final Project Leaderboard</h2>
+    <div id="leaderboard-content"></div>
+</section>
 
 
 
@@ -482,6 +492,49 @@
 
     sections.forEach(section => observer.observe(section));
 });
+
+
+// Leaderboard: 
+
+
+const teams = [
+    { id: 1, name: "Molecular Designer 1", score: 0 },
+    { id: 2, name: "ChemPandas", score: 0 },
+    { id: 8, name: "Molecular Designer 8", score: 0 },
+    { id: 3, name: "Molecular Designer 3", score: 0 },
+    { id: 7, name: "Molecular Designer 7", score: 0 },
+    { id: 4, name: "Molecular Designer 4", score: 0 },
+    { id: 5, name: "Chem Duo", score: 0 },
+    { id: 6, name: "Molecular Designer 6", score: 0 },
+    { id: 9, name: "Molecular Designer 9", score: 0 },
+    { id: 10, name: "Molecular Designer 10", score: 0 },
+];
+
+function getRankEmoji(rank) {
+    if (rank === 1) return '🥇';
+    if (rank === 2) return '🥈';
+    if (rank === 3) return '🥉';
+    return rank;
+}
+
+
+function updateLeaderboard() {
+    teams.sort((a, b) => b.score - a.score); // Sort teams by score
+
+    const leaderboardDiv = document.getElementById('leaderboard-content');
+    leaderboardDiv.innerHTML = ''; // Clear existing content
+
+    teams.forEach((team, index) => {
+    const teamDiv = document.createElement('div');
+    teamDiv.className = 'team';
+    teamDiv.innerHTML = `<span class="rank">${getRankEmoji(index + 1)}</span> <span><strong>${team.name}</strong> (ID: ${team.id})</span> <span class="score">Score: ${team.score}</span>`;
+    leaderboardDiv.appendChild(teamDiv);
+});
+}
+
+// Call this function to initially populate the leaderboard
+updateLeaderboard();
+
 
 
 </script>
