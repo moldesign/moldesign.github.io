@@ -501,14 +501,36 @@
 const teams = [
     { id: 1, name: "Molecular Designer 1", score: 0 },
     { id: 2, name: "ChemPandas", score: 1.056 },
-    { id: 8, name: "Molecular Designer 8", score: 0 },
     { id: 3, name: "Molecular Designer 3", score: 0 },
-    { id: 7, name: "Molecular Designer 7", score: 0 },
     { id: 4, name: "Molecular Designer 4", score: 0 },
     { id: 5, name: "Chem Duo", score: 0 },
     { id: 6, name: "Molecular Designer 6", score: 0 },
-    { id: 18, name: "Molecular Designer 18", score: 0.991 },
+    { id: 7, name: "Molecular Designer 7", score: 0 },
+    { id: 8, name: "Molecular Designer 8", score: 0 },
+    { id: 9, name: "Molecular Designer 9", score: 0 },
     { id: 10, name: "Molecular Designer 10", score: 0.936 },
+    { id: 11, name: "Molecular Designer 11", score: 0 },
+    { id: 12, name: "Molecular Designer 12", score: 0 },
+    { id: 13, name: "Molecular Designer 13", score: 0 },
+    { id: 14, name: "Molecular Designer 14", score: 0 },
+    { id: 15, name: "Molecular Designer 15", score: 0 },
+    { id: 16, name: "Molecular Designer 16", score: 0 },
+    { id: 17, name: "Molecular Designer 17", score: 0 },
+    { id: 18, name: "Molecular Designer 18", score: 0.991 },
+    { id: 19, name: "Molecular Designer 19", score: 0 },
+    { id: 20, name: "Molecular Designer 20", score: 0 },
+    { id: 21, name: "Molecular Designer 21", score: 0 },
+    { id: 22, name: "Molecular Designer 22", score: 0 },
+    { id: 23, name: "Molecular Designer 23", score: 0 },
+    { id: 24, name: "Molecular Designer 24", score: 0 },
+    { id: 25, name: "Molecular Designer 25", score: 0 },
+    { id: 26, name: "Molecular Designer 26", score: 0 },
+    { id: 27, name: "Molecular Designer 27", score: 0 },
+    { id: 28, name: "Molecular Designer 28", score: 0 },
+    { id: 29, name: "Molecular Designer 29", score: 0 },
+    { id: 30, name: "Molecular Designer 30", score: 0 },
+    { id: 31, name: "Molecular Designer 31", score: 0 },
+    { id: 32, name: "Molecular Designer 32", score: 0 }
 ];
 
 function getRankEmoji(rank) {
@@ -520,18 +542,22 @@ function getRankEmoji(rank) {
 
 
 function updateLeaderboard() {
-    teams.sort((a, b) => b.score - a.score); // Sort teams by score
+    teams.sort((a, b) => b.score - a.score);
+
+    const topTeams = teams.slice(0, 10);
 
     const leaderboardDiv = document.getElementById('leaderboard-content');
-    leaderboardDiv.innerHTML = ''; // Clear existing content
+    leaderboardDiv.innerHTML = ''; 
 
-    teams.forEach((team, index) => {
-    const teamDiv = document.createElement('div');
-    teamDiv.className = 'team';
-    teamDiv.innerHTML = `<span class="rank">${getRankEmoji(index + 1)}</span> <span><strong>${team.name}</strong> (ID: ${team.id})</span> <span class="score">Score: ${team.score}</span>`;
-    leaderboardDiv.appendChild(teamDiv);
-});
+    topTeams.forEach((team, index) => {
+        const teamDiv = document.createElement('div');
+        teamDiv.className = 'team';
+        teamDiv.innerHTML = `<span class="rank">${getRankEmoji(index + 1)}</span> <span><strong>${team.name}</strong> (ID: ${team.id})</span> <span class="score">Score: ${team.score}</span>`;
+
+        leaderboardDiv.appendChild(teamDiv);
+    });
 }
+
 
 // Call this function to initially populate the leaderboard
 updateLeaderboard();
